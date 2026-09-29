@@ -79,11 +79,9 @@ public class Bloom(IntPtr cppPtr) : MonoBehaviour(cppPtr)
     /// Blend factor of the result image.
     public float Intensity
     {
-        get => Mathf.Max(_intensity, 0);
-        set => _intensity = value;
-    }
-
-    private float _intensity = 1;
+        get => Mathf.Max(field, 0);
+        set;
+    } = 1.1f;
 
     /// High quality mode
     /// Controls filter quality and buffer resolution.
